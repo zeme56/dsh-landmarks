@@ -1,0 +1,58 @@
+{
+  "name": "dsh-landmarks",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "世界地标 3D 巡礼 —— 在 DeepSeek Harness 左侧边栏打开一个可交互的 3D 展厅：埃菲尔铁塔、中国长城、紫禁城、泰姬陵。",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeme56/dsh-landmarks.git"
+  },
+  "homepage": "https://github.com/zeme56/dsh-landmarks#readme",
+  "icon": "./icon.svg",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "3d",
+    "three",
+    "landmarks"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "locale",
+    "docs",
+    "tools",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "react": "^18.3.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "license": "MIT"
+}

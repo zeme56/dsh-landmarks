@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>五间安静的屋子 · Quiet Rooms</title>
+		<link rel="stylesheet" href="./styles.css" />
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "./vendor/three.module.js",
+					"three/addons/": "./vendor/addons/"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<canvas id="stage"></canvas>
+			<div class="vignette"></div>
+			<div class="grain"></div>
+
+			<header class="topbar">
+				<div class="brand">
+					<span class="brand-mark">◐</span>
+					<span class="brand-name">五间安静的屋子</span>
+					<span class="brand-en">QUIET ROOMS</span>
+				</div>
+				<div class="toolbar">
+					<button id="btn-orbit" class="tool" type="button" aria-pressed="true">自动漫游</button>
+					<button id="btn-reset" class="tool" type="button">回到门口</button>
+					<button id="btn-prose" class="tool" type="button" aria-pressed="true">文字</button>
+				</div>
+			</header>
+
+			<nav id="rail" class="rail" aria-label="房间"></nav>
+
+			<section class="hud">
+				<div class="hud-head">
+					<span id="room-index" class="room-index">01</span>
+					<div>
+						<h1 id="room-title" class="room-title">山居 · 初春清晨的雾</h1>
+						<p id="room-sub" class="room-sub">Mountain house · fog at first light</p>
+					</div>
+				</div>
+				<div id="params" class="params"></div>
+			</section>
+
+			<aside id="prose" class="prose">
+				<div class="prose-inner">
+					<p class="prose-kicker">一天里没有人会来找你</p>
+					<div id="prose-body"></div>
+					<p class="prose-foot">拖动画面环视 · 滚轮靠近 · 拖滑块改变天气</p>
+				</div>
+			</aside>
+
+			<div id="veil" class="veil"></div>
+			<div id="loading" class="loading"><span></span><em>正在生雾…</em></div>
+		</div>
+		<script type="module" src="./app.js"></script>
+	</body>
+</html>

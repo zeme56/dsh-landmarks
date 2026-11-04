@@ -1,8 +1,8 @@
 {
   "name": "dsh-landmarks",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
-  "description": "世界地标 3D 巡礼 —— 在 DeepSeek Harness 左侧边栏打开一个可交互的 3D 展厅：埃菲尔铁塔、中国长城、紫禁城、泰姬陵。",
+  "description": "世界地标 3D 巡礼 + 五间安静的屋子 —— 在 DeepSeek Harness 左侧边栏打开可交互的 3D 展厅：埃菲尔铁塔、中国长城、紫禁城、泰姬陵，以及五间由散文长出来的安静房间。",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zeme56/dsh-landmarks.git"
@@ -10,13 +10,16 @@
   "homepage": "https://github.com/zeme56/dsh-landmarks#readme",
   "icon": "./icon.svg",
   "keywords": [
+    "3d",
+    "blender",
     "deepseek",
     "deepseek-harness",
     "dsh",
     "dsh-plugin",
-    "3d",
+    "landmarks",
+    "quiet-rooms",
     "three",
-    "landmarks"
+    "three.js"
   ],
   "main": "lib/index.js",
   "exports": {
@@ -30,6 +33,7 @@
   "files": [
     "lib",
     "assets",
+    "rooms",
     "locale",
     "docs",
     "tools",
